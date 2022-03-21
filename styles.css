@@ -1,0 +1,67 @@
+.list-group-item {
+  padding: 2.5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.race-country-flag {
+  height: 30px;
+}
+
+.driver-number {
+  height: 25px;
+  margin-top: 2.5px;
+  margin-left: 30px;
+}
+
+.driver-country-span, .team-country-span {
+  display: inline-block;
+  width: 60px;
+}
+
+.driver-country, .team-country {
+  height: 25px;
+}
+
+.team-icon {
+  width: 35px;
+  margin-left: 30px;
+  margin-top: 2.5px;
+}
+
+.driver-team {
+  height: 35px;
+  margin-right: 30px;
+  float: right;
+}
+
+.driver-name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 200px;;
+}
+
+.team-name {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.driver-points, .team-points {
+  font-size: 20px;
+  font-weight: bold;
+  float: right;
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+  border: #000 1px solid;
+  border-radius: 5px;
+}
+
+.driver-givenName {
+  font-size: 15px;
+  margin-left: 30px;
+}
