@@ -64,7 +64,7 @@ function showRaces(id) {
 	let html = `<h2 class="list-header">Races</h2>
     <div class="list-group races">`;
 	for (var i = 0; i < races.length; i++) {
-		html += `<div class="list-group-item race">
+		html += `<div class="list-group-item race" onclick="toggleClick(this)">
 		<span class="race-country-flag-span">
         <img class="race-country-flag" src="/img/flags/${
 			races[i].country
@@ -74,6 +74,9 @@ function showRaces(id) {
         <span class="race-shortName">${races[i].shortName}</span>
         <span class="race-dates">${races[i].dates}</span>
         <img class="race-circuit-small" src="/img/circuits/small/${
+			races[i].shortName
+		}.png"/>
+		<img class="race-circuit-full" src="/img/circuits/full/${
 			races[i].shortName
 		}.png"/>
         </div>`;

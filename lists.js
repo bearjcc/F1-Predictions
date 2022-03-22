@@ -15,3 +15,4 @@ function listToHTML(list, id, draggable) {
 showRaces("races");
 showDrivers("drivers", drivers, "sorted");
 showTeams("teams");
+showPlayers("players");
