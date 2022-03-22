@@ -16,3 +16,4 @@ showRaces("races");
 showDrivers("drivers", drivers, "sorted");
 showTeams("teams");
 showPlayers("players");
+showDrivers("draggable", drivers, "drag");
