@@ -46,14 +46,14 @@ function showDrivers(id, drivers, type) {
 		html += `<div class="list-group-item driver"
 		onclick="toggleClick(this)">
         <span class="driver-country-span">
-        <img class="driver-country" src="/img/flags/${drivers[i].country}.svg"/>
+        <img class="driver-country" src="img/flags/${drivers[i].country}.svg"/>
         </span>
-        <img class="driver-number" src="/img/numbers/${drivers[i].name}.png"/>
+        <img class="driver-number" src="img/numbers/${drivers[i].name}.png"/>
         <span class="driver-name">${drivers[i].name}</span>
         <span class="driver-givenName">${drivers[i].givenName}</span>
         <span class="driver-points">${drivers[i].points}</span>
-        <img class="driver-team" src="/img/teams/${drivers[i].team.name}.png" />
-        <img class="driver-profile" src="/img/profile/${drivers[i].name}.png" />
+        <img class="driver-team" src="img/teams/${drivers[i].team.name}.png" />
+        <img class="driver-profile" src="img/profile/${drivers[i].name}.png" />
         </div>`;
 	}
 	html += `</div>`;

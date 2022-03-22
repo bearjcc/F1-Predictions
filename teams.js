@@ -17,9 +17,9 @@ function showTeams(id) {
 	for (var i = 0; i < teams.length; i++) {
 		html += `<div class="list-group-item team">
         <span class="team-country-span">
-        <img class="team-country" src="/img/flags/${teams[i].country}.svg"/>
+        <img class="team-country" src="img/flags/${teams[i].country}.svg"/>
         </span>
-        <img class="team-icon" src="/img/teams/${teams[i].name}.png"/>
+        <img class="team-icon" src="img/teams/${teams[i].name}.png"/>
         <span class="team-name">${teams[i].name}</span>
         <span class="team-points">${teams[i].points}</span>
 		<span class="team-stripes ${teams[i].name}"><b></b><i></i></span>
