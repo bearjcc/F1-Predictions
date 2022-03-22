@@ -1,39 +1,125 @@
-.Mercedes {
-    background-color: #6cd3bf;
+:root {
+    --Mercedes: #6cd3bf;
+	--Mercedes_2: #999;
+    --RedBull: #1E5BC6;
+	--RedBull_2: #000;
+    --Ferrari: #ED1C24;
+	--Ferrari_2: #000000;
+    --McLaren: #F58020;
+	--McLaren_2: #0078ff;
+    --Alpine: #2293D1;
+	--Alpine_2: #e73895;
+    --AlphaTauri: #4E7C9B;
+	--AlphaTauri_2: #fff;
+    --AstonMartin: #2D826D;
+	--AstonMartin_2: #cedc00;
+	--Williams: #041e42;
+	--Williams_2: red;
+    --AlfaRomeo: #B12039;
+	--AlfaRomeo_2: #fff;
+    --Haas: #B6BABD;
+	--Haas_2: #e6002d;
 }
 
-.Red .Bull {
-
+.team-stripes {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	display: inline-block;
+	margin-right: 60px;
+	width: 60%;
+	float: right;
 }
 
-.Ferrari {
-
+.team-stripes b,
+.team-stripes i {
+	display: block;
+	width: 100%;
 }
 
-.McLaren {
-
+.team-stripes b {
+	height: 20px;
 }
 
-.Alpine {
-
+.team-stripes i {
+	height: 5px;
 }
 
-.AlphaTauri {
-
+.Mercedes b {
+	background-color: var(--Mercedes);
 }
 
-.Aston .Martin {
-
+.Mercedes i {
+    background-color: var(--Mercedes_2);
 }
 
-.Williams {
-
+.Red b {
+	background-color: var(--RedBull);
 }
 
-.Alfa .Romeo {
-
+.Red i {
+	background-color: var(--RedBull_2);
 }
 
-.Haas {
+.Ferrari b{
+	background-color: var(--Ferrari);
+}
 
+.Ferrari i {
+	background-color: var(--Ferrari_2);
+}
+
+.McLaren b{
+	background-color: var(--McLaren);
+}
+
+.McLaren i {
+	background-color: var(--McLaren_2);
+}
+
+.Alpine b{
+	background-color: var(--Alpine);
+}
+
+.Alpine i {
+	background-color: var(--Alpine_2);
+}
+
+.AlphaTauri b{
+	background-color: var(--AlphaTauri);
+}
+
+.AlphaTauri i {
+	background-color: var(--AlphaTauri_2);
+}
+
+.Aston b{
+	background-color: var(--AstonMartin);
+}
+
+.Aston i {
+	background-color: var(--AstonMartin_2);
+}
+
+.Williams b{
+	background-color: var(--Williams);
+}
+
+.Williams i {
+	background-color: var(--Williams_2);
+}
+
+.Alfa b{
+	background-color: var(--AlfaRomeo);
+}
+
+.Alfa i {
+	background-color: var(--AlfaRomeo_2);
+}
+
+.Haas b{
+	background-color: var(--Haas);
+}
+
+.Haas i {
+	background-color: var(--Haas_2);
 }

@@ -1,44 +1,50 @@
 let drivers = [];
 
 class Driver {
-    constructor(name, givenName, team, number, country) {
-        drivers.push(this);
-        this.name = name;
-        this.givenName = givenName;
-        this.team = team;
-        this.number = number;
-        this.country = country;
-        
-        this.points = 0;
-        this.finishes = [];
-        this.sprints = [];
-        this.fastest = [];
-    }
+	constructor(name, givenName, team, number, country) {
+		drivers.push(this);
+		this.name = name;
+		this.givenName = givenName;
+		this.team = team;
+		this.number = number;
+		this.country = country;
 
-    setTeam(team) {
-        this.team = team;
-        team.drivers.push(this)
-    }
+		this.points = 0;
+		this.finishes = [];
+		this.sprints = [];
+		this.fastest = [];
+	}
 
-    addPoints(points) {
-        this.points += points;
-        this.team.points += points;
-    }
+	setTeam(team) {
+		this.team = team;
+		team.drivers.push(this);
+	}
 
+	addPoints(points) {
+		this.points += points;
+		this.team.points += points;
+	}
 }
 
+/**
+ * @description
+ * @param {string} id //html element to be filled with a list
+ * @param {Driver[]} drivers
+ * @param {string "sorted" or "drag"} type
+ */
 function showDrivers(id, drivers, type) {
-    if(type == "sorted" || type == "championship") {
-        drivers.sort(function(a, b) {
-            return b.points - a.points;
-        });
-    }
-    var el = document.getElementById(id);
-    let html = `<h2 class="list-header">Drivers</h2>
-    <div class="list-group drivers">`
+	if (type == "sorted" || type == "championship") {
+		drivers.sort(function (a, b) {
+			return b.points - a.points;
+		});
+	}
+	var el = document.getElementById(id);
+	let html = `<h2 class="list-header">Drivers</h2>
+    <div class="list-group drivers">`;
 
-    for (var i = 0; i < drivers.length; i++) {
-        html += `<div class="list-group-item driver">
+	for (var i = 0; i < drivers.length; i++) {
+		html += `<div class="list-group-item driver"
+		onclick="toggleClick(this)">
         <span class="driver-country-span">
         <img class="driver-country" src="/img/flags/${drivers[i].country}.svg"/>
         </span>
@@ -47,22 +53,25 @@ function showDrivers(id, drivers, type) {
         <span class="driver-givenName">${drivers[i].givenName}</span>
         <span class="driver-points">${drivers[i].points}</span>
         <img class="driver-team" src="/img/teams/${drivers[i].team.name}.png" />
-        </div>`
-    }
-    html += `</div>`
-    el.innerHTML = html
+        <img class="driver-profile" src="/img/profile/${drivers[i].name}.png" />
+        </div>`;
+	}
+	html += `</div>`;
+	el.innerHTML = html;
 
-    if(type == "sort") {
-        Sortable.create(el.lastChild, {
-            animation: 150,
-
-        });
-    }
-
+	if (type == "sort" || type == "drag") {
+		Sortable.create(el.lastChild, {
+			animation: 150,
+		});
+	}
 }
 
-let leclerc = new Driver("Leclerc", "Charles", ferrari, 16, "Monaco");
+function toggleClick(el) {
+	el.classList.toggle("clicked");
+}
+
 let sainz = new Driver("Sainz", "Carlos", ferrari, 55, "Spain");
+let leclerc = new Driver("Leclerc", "Charles", ferrari, 16, "Monaco");
 let hamilton = new Driver("Hamilton", "Lewis", mercedes, 44, "Great Britain");
 let russell = new Driver("Russell", "George", mercedes, 63, "Great Britain");
 let magnussen = new Driver("Magnussen", "Kevin", haas, 20, "Denmark");

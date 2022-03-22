@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Formula 1 Predictions</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formula 1 Predictions</title>
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="/teams.css" />
+		<link rel="stylesheet" href="/tabs.css" />
 
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/teams.css">
+		<script src="/Sortable.js"></script>
+	</head>
 
-    <script src="/Sortable.js"></script>
-</head>
+	<body>
+		<div class="tabs">
+			<button class="tablinks active" onclick="openTab(this, 'races')">
+				Races
+			</button>
+			<button class="tablinks" onclick="openTab(this, 'drivers')">
+				Drivers
+			</button>
+			<button class="tablinks" onclick="openTab(this, 'teams')">
+				Teams
+			</button>
+			<button class="tablinks" onclick="openTab(this, 'players')">
+				Players
+			</button>
+		</div>
+		<div class="tabcontent active" id="races"></div>
+		<div class="tabcontent" id="drivers"></div>
+		<div class="tabcontent" id="teams"></div>
+		<div class="tabcontent" id="players"></div>
 
-<body>
-    <div id="races"></div>
-    <div id="drivers"></div>
-    <div id="teams"></div>
-    
-    <script src="/teams.js"></script>
-    <script src="/drivers.js"></script>
-    <script src="/races.js"></script>
-    <!-- <script src="/players.js"></script> -->
-    <script src="/lists.js"></script>
-</body>
-
+		<script src="/teams.js"></script>
+		<script src="/drivers.js"></script>
+		<script src="/races.js"></script>
+		<!-- <script src="/players.js"></script> -->
+		<script src="/lists.js"></script>
+		<script src="/tabs.js"></script>
+	</body>
 </html>
