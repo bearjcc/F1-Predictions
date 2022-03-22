@@ -24,6 +24,7 @@ function showPlayers(id) {
 
 let bear = new Player("Bear");
 let zoe = new Player("Zoe");
+let rebecca = new Player("Rebecca");
 
 let bot2020 = new Player("Bot2020");
 let bot2021 = new Player("Bot2021");

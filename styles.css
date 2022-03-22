@@ -104,10 +104,16 @@
     margin-left: 30px;
 }
 
-.driver-profile {
+.driver-profile,
+.team-car {
     height: 35px;
     margin-right: 30px;
     float: right;
+}
+
+.clicked .team-car,
+.team.clicked {
+    height: 200px;
 }
 
 .race-circuit-full {
@@ -118,6 +124,10 @@
 
 .clicked .race-circuit-small {
     height: 0;
+}
+
+.clicked .team-stripes {
+    display: none;
 }
 
 

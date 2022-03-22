@@ -15,13 +15,14 @@ function showTeams(id) {
 	let html = `<h2 class="list-header">Teams</h2>
     <div class="list-group teams">`;
 	for (var i = 0; i < teams.length; i++) {
-		html += `<div class="list-group-item team">
+		html += `<div class="list-group-item team" onclick="toggleClick(this)">
         <span class="team-country-span">
         <img class="team-country" src="img/flags/${teams[i].country}.svg"/>
         </span>
         <img class="team-icon" src="img/teams/${teams[i].name}.png"/>
         <span class="team-name">${teams[i].name}</span>
         <span class="team-points">${teams[i].points}</span>
+        <img class="team-car" src="img/cars/${teams[i].name}.png"/>
 		<span class="team-stripes ${teams[i].name}"><b></b><i></i></span>
         </div>`;
 	}

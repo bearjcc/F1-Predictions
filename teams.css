@@ -26,7 +26,7 @@
 	padding-bottom: 12px;
 	display: inline-block;
 	margin-right: 60px;
-	width: 60%;
+	width: calc(100% - 60px - 30px - 35px - 150px - 30px - 30px - 199px - 30px - 42px);
 	float: right;
 }
 
