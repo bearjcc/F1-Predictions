@@ -1,4 +1,5 @@
-import { drivers, Driver } from "./Drivers";
+import { Driver, drivers } from "./Drivers";
+
 export let races: Race[] = [];
 
 let racePoints = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1];

@@ -1,4 +1,4 @@
-import { Driver } from "./Drivers";
+import type { Driver } from "../Interfaces";
 
 export let teams: Team[] = [];
 export class Team {

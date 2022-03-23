@@ -9,9 +9,7 @@ import { ListDrivers } from "./components/ListDrivers";
 import { ListRaces } from "./components/ListRaces";
 import { Tabs } from "./components/Tabs";
 import * as Data2022 from "./data/2022";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import { MUI } from "./components/MUI";
+import { MUI } from "./demos/MUI";
 
 function App() {
 	require("./data/2022.tsx");

@@ -1,5 +1,4 @@
-import { Race } from "./Races";
-import { Team } from "./Teams";
+import { Race, Team } from "../Interfaces";
 
 export let drivers: Driver[] = [];
 export class Driver {
