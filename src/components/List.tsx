@@ -104,7 +104,7 @@ export class DriverNumber extends React.Component<{ obj: { name: string; number:
 export class Name extends React.Component<{
 	largeName: string;
 	smallName: string;
-	smallFirst: Boolean;
+	smallFirst: boolean;
 }> {
 	render() {
 		return (

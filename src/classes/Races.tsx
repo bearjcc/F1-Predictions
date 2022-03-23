@@ -8,7 +8,7 @@ let sprintPoints = [8, 7, 6, 5, 4, 3, 2, 1];
 export class Race {
 	results: Driver[] = [];
 	fastest: Driver;
-	completed: Boolean = false;
+	completed: boolean = false;
 	drivers: Driver[];
 	startDate: Date = new Date();
 	endDate: Date = new Date();

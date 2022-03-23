@@ -30,7 +30,7 @@ export class Tabs extends React.Component {
 	}
 }
 
-class TabButton extends React.Component<{ tabName: string; first: Boolean }> {
+class TabButton extends React.Component<{ tabName: string; first: boolean }> {
 	constructor(props: any) {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
@@ -56,7 +56,7 @@ class TabButton extends React.Component<{ tabName: string; first: Boolean }> {
 	}
 }
 
-class TabContent extends React.Component<{ tabName: string; first: Boolean }> {
+class TabContent extends React.Component<{ tabName: string; first: boolean }> {
 	render() {
 		return (
 			<div

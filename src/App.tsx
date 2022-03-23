@@ -1,22 +1,22 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Button from "@mui/material/Button";
-import "./App.css";
-import { drivers } from "./classes/Drivers";
-import { races } from "./classes/Races";
-import { DragIcon, DriverNumber, List, Position } from "./components/List";
-import { ListDrivers } from "./components/ListDrivers";
-import { ListRaces } from "./components/ListRaces";
-import { Tabs } from "./components/Tabs";
-import * as Data2022 from "./data/2022";
-import { MUI } from "./demos/MUI";
+import {
+	AppBar,
+	Button,
+	Drawer,
+	IconButton,
+	ThemeProvider,
+	Toolbar,
+	Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { f1Theme } from "./themes/f1Theme";
+import { Navbar } from "./components/Navbar";
 
 function App() {
 	require("./data/2022.tsx");
 
 	return (
 		<div className="App">
-			<MUI />
+			<Navbar defaultPage="Home" />
 			{/* <Tabs>
 				<div id="Test">
 					<List >

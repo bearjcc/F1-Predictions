@@ -1,7 +1,7 @@
 import React from "react";
 
 export class Toggle extends React.Component<{}> {
-	state: { isToggleOn: Boolean };
+	state: { isToggleOn: boolean };
 	constructor(props: any) {
 		super(props);
 		this.state = { isToggleOn: true };
@@ -11,7 +11,7 @@ export class Toggle extends React.Component<{}> {
 	}
 
 	handleClick() {
-		this.setState((prevState: { isToggleOn: Boolean }) => ({
+		this.setState((prevState: { isToggleOn: boolean }) => ({
 			isToggleOn: !prevState.isToggleOn,
 		}));
 	}

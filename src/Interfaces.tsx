@@ -17,7 +17,7 @@ export interface Driver {
 export interface Race {
 	results: Driver[];
 	fastest: Driver;
-	completed: Boolean;
+	completed: boolean;
 	drivers: Driver[];
 	startDate: Date;
 	endDate: Date;
