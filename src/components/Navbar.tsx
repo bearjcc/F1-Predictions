@@ -177,7 +177,7 @@ export class Navbar extends React.Component<NavbarProps, NavbarState> {
 								edge="start"
 								color="inherit"
 								aria-label="menu"
-								onClick={this.toggleDrawer(true)}
+								onClick={toggleDrawer(true)}
 							>
 								<MenuIcon />
 							</IconButton>
@@ -186,7 +186,7 @@ export class Navbar extends React.Component<NavbarProps, NavbarState> {
 						</Toolbar>
 					</AppBar>
 					{/* <SwipeableTemporaryDrawer /> */}
-					<SwipeableDrawer
+					{/* <SwipeableDrawer
 						anchor="left"
 						open={this.state.drawerOpen}
 						onClose={this.toggleDrawer(false)}
@@ -194,8 +194,86 @@ export class Navbar extends React.Component<NavbarProps, NavbarState> {
 						color="primary"
 					>
 						{this.list()}
-					</SwipeableDrawer>
+					</SwipeableDrawer> */}
+					<NavDrawer />
 				</ThemeProvider>
+			</div>
+		);
+	}
+}
+
+interface NavDrawerProps {}
+
+interface NavDrawerState {
+	drawerOpen: boolean;
+}
+
+export class NavDrawer extends React.Component<NavDrawerProps, NavDrawerState> {
+	constructor(props: NavDrawerProps) {
+		super(props);
+		this.state = {
+			drawerOpen: false,
+		};
+	}
+
+	toggleDrawer(open: boolean) {
+		return (event: React.KeyboardEvent | React.MouseEvent) => {
+			if (
+				event &&
+				event.type === "keydown" &&
+				((event as React.KeyboardEvent).key === "Tab" ||
+					(event as React.KeyboardEvent).key === "Shift")
+			) {
+				return;
+			}
+
+			this.setState({ ...this.state, drawerOpen: open });
+		};
+	}
+
+	list = () => (
+		<Box
+			sx={{ width: 250 }}
+			role="presentation"
+			onClick={this.toggleDrawer(false)}
+			onKeyDown={this.toggleDrawer(false)}
+		>
+			<List>
+				{["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+			<Divider />
+			<List>
+				{["All mail", "Forky", "Spam"].map((text, index) => (
+					<ListItem button key={text}>
+						<ListItemIcon>
+							{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+		</Box>
+	);
+
+	render() {
+		return (
+			<div>
+				<SwipeableDrawer
+					anchor="left"
+					open={this.state.drawerOpen}
+					onClose={this.toggleDrawer(false)}
+					onOpen={this.toggleDrawer(true)}
+					color="primary"
+				>
+					{this.list()}
+				</SwipeableDrawer>
 			</div>
 		);
 	}
