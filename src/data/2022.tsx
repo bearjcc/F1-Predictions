@@ -15,8 +15,8 @@ let redBull = new Team("Red Bull", "Austria");
 
 let leclerc = new Driver("Leclerc", "Charles", ferrari, 16, "Monaco");
 let sainz = new Driver("Sainz", "Carlos", ferrari, 55, "Spain");
-let hamilton = new Driver("Hamilton","Lewis", mercedes, 44, "Great Britain");
-let russell = new Driver("Russell","George",	mercedes, 63, "Great Britain");
+let hamilton = new Driver("Hamilton", "Lewis", mercedes, 44, "Great Britain");
+let russell = new Driver("Russell", "George", mercedes, 63, "Great Britain");
 let magnussen = new Driver("Magnussen", "Kevin", haas, 20, "Denmark");
 let bottas = new Driver("Bottas", "Valtteri", alfaRomeo, 77, "Finland");
 let ocon = new Driver("Ocon", "Esteban", alpine, 31, "France");
@@ -36,10 +36,32 @@ let gasly = new Driver("Gasly", "Pierre", alphaTauri, 10, "France");
 let vettel = new Driver("Vettel", "Sebastian", astonMartin, 5, "Germany");
 
 let bahrain = new Race("Bahrain", "Bahrain", "Mar 18-20");
-bahrain.removeDriver(vettel)
+bahrain.removeDriver(vettel);
 bahrain.raceEnded(
-	[leclerc, sainz, hamilton, russell, magnussen, bottas, ocon, tsunoda, alonso, zhou, schumacher, stroll, albon, ricciardo, norris, latifi, hulkenberg, perez, verstappen, gasly],
-	leclerc)
+	[
+		leclerc,
+		sainz,
+		hamilton,
+		russell,
+		magnussen,
+		bottas,
+		ocon,
+		tsunoda,
+		alonso,
+		zhou,
+		schumacher,
+		stroll,
+		albon,
+		ricciardo,
+		norris,
+		latifi,
+		hulkenberg,
+		perez,
+		verstappen,
+		gasly,
+	],
+	leclerc
+);
 
 let jeddah = new Race("Jeddah", "Saudi Arabia", "Mar 25-27");
 let australia = new Race("Australia", "Australia", "Apr 08-10");

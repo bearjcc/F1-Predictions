@@ -1,22 +1,18 @@
 import { drivers, Driver } from "./Drivers";
-export let races:Race[] = [];
+export let races: Race[] = [];
 
 let racePoints = [25, 18, 15, 12, 10, 8, 6, 4, 2, 1];
 let sprintPoints = [8, 7, 6, 5, 4, 3, 2, 1];
 
 export class Race {
-	results:Driver[] = [];
-	fastest:Driver;
-	completed:Boolean = false;
-	drivers:Driver[];
-	startDate:Date = new Date();
-	endDate:Date = new Date();
+	results: Driver[] = [];
+	fastest: Driver;
+	completed: Boolean = false;
+	drivers: Driver[];
+	startDate: Date = new Date();
+	endDate: Date = new Date();
 
-	constructor(
-		public shortName:string,
-		public country:string,
-		public dates:string) 
-	{
+	constructor(public shortName: string, public country: string, public dates: string) {
 		races.push(this);
 		this.drivers = [...drivers];
 		this.startDate.setDate(Date.parse(dates.substring(0, 5) + ", 2022"));
@@ -24,14 +20,14 @@ export class Race {
 		this.endDate.setDate(this.startDate.getDate() + 2);
 	}
 
-	removeDriver(driver:Driver) {
+	removeDriver(driver: Driver) {
 		let index = this.drivers.indexOf(driver);
 		if (index > -1) {
 			this.drivers.splice(index, 1);
 		}
 	}
 
-	raceEnded(results:Driver[], fastest:Driver) {
+	raceEnded(results: Driver[], fastest: Driver) {
 		this.results = results;
 		this.fastest = fastest;
 		this.completed = true;
@@ -46,12 +42,12 @@ export class Race {
 }
 
 export class Sprint extends Race {
-	constructor(race:Race, date:string) {
+	constructor(race: Race, date: string) {
 		super(race.shortName, race.country, date);
 		this.shortName += " Sprint";
 	}
 
-	raceEnded(results:Driver[]) {
+	raceEnded(results: Driver[]) {
 		this.results = results;
 		this.completed = true;
 
@@ -64,7 +60,7 @@ export class Sprint extends Race {
 
 // export class showRaces extends React.Component {
 // 	private raceJSX: JSX.Element = null;
-	
+
 // 	render() {
 // 		return (
 // 			<div className="list-group races">
@@ -72,7 +68,6 @@ export class Sprint extends Race {
 // 			</div>
 // 		);
 // 	}
-
 
 // 	private raceMakeJSX(race:Race, i:number): JSX.Element {
 // 		return (
@@ -89,5 +84,5 @@ export class Sprint extends Race {
 // 		)
 
 // 	}
-	
+
 // }

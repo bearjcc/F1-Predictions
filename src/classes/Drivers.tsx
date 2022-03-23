@@ -1,41 +1,40 @@
-import {Race} from "./Races";
-import {Team} from "./Teams"
+import { Race } from "./Races";
+import { Team } from "./Teams";
 
-export let drivers:Driver[] = [];
+export let drivers: Driver[] = [];
 export class Driver {
-	public points:number = 0;
-	public finishes:{race:Race, pos:number}[] = [];
-	public sprints:{race:Race, pos:number}[] = [];
-	public fastest:Race[] = [];
+	public points: number = 0;
+	public finishes: { race: Race; pos: number }[] = [];
+	public sprints: { race: Race; pos: number }[] = [];
+	public fastest: Race[] = [];
 
 	constructor(
-		public name:string,
-		public givenName:string, 
-		public team:Team, 
-		public number:number,
-		public country:string
-		) {
-			drivers.push(this);
-			this.setTeam(team);
+		public name: string,
+		public givenName: string,
+		public team: Team,
+		public number: number,
+		public country: string
+	) {
+		drivers.push(this);
+		this.setTeam(team);
 	}
 
-	setTeam(team:Team) {
+	setTeam(team: Team) {
 		this.team = team;
 		team.drivers.push(this);
 	}
 
-	addPoints(points:number) {
+	addPoints(points: number) {
 		this.points += points;
 		this.team.points += points;
 	}
 }
 
-
 // export class showDrivers extends React.Component {
 // 	private id:string;
 // 	private drivers:Driver[];
 // 	private type:"sorted" | "championship" | "sort" | "drag";
-	
+
 // 	constructor(props:{
 // 		id:string,
 // 		drivers:Driver[],

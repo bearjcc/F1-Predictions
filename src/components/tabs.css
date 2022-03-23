@@ -4,43 +4,43 @@
 
 /* Style the tab */
 .tabs {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
 .tabs button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
 .tabs button:hover {
-    background-color: #ddd;
+	background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
 .tabs button.active {
-    background-color: #ccc;
+	background-color: #ccc;
 }
 
 /* Style the tab content */
 .tab-content {
-    display: none;
+	display: none;
 	width: 100%;
-    padding: 2px;
-    border: 1px solid #ccc;
+	padding: 2px;
+	border: 1px solid #ccc;
 	border-radius: 5px;
-    border-top: none;
+	border-top: none;
 }
 
 .tab-content.active {
-    display: block;
+	display: block;
 }

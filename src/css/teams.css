@@ -1,23 +1,23 @@
 :root {
-    --Mercedes: #6cd3bf;
+	--Mercedes: #6cd3bf;
 	--Mercedes_2: #999;
-    --RedBull: #1E5BC6;
+	--RedBull: #1e5bc6;
 	--RedBull_2: #000;
-    --Ferrari: #ED1C24;
+	--Ferrari: #ed1c24;
 	--Ferrari_2: #000000;
-    --McLaren: #F58020;
+	--McLaren: #f58020;
 	--McLaren_2: #0078ff;
-    --Alpine: #2293D1;
+	--Alpine: #2293d1;
 	--Alpine_2: #e73895;
-    --AlphaTauri: #4E7C9B;
+	--AlphaTauri: #4e7c9b;
 	--AlphaTauri_2: #fff;
-    --AstonMartin: #2D826D;
+	--AstonMartin: #2d826d;
 	--AstonMartin_2: #cedc00;
 	--Williams: #041e42;
 	--Williams_2: red;
-    --AlfaRomeo: #B12039;
+	--AlfaRomeo: #b12039;
 	--AlfaRomeo_2: #fff;
-    --Haas: #B6BABD;
+	--Haas: #b6babd;
 	--Haas_2: #e6002d;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .Mercedes i {
-    background-color: var(--Mercedes_2);
+	background-color: var(--Mercedes_2);
 }
 
 .Red b {
@@ -60,7 +60,7 @@
 	background-color: var(--RedBull_2);
 }
 
-.Ferrari b{
+.Ferrari b {
 	background-color: var(--Ferrari);
 }
 
@@ -68,7 +68,7 @@
 	background-color: var(--Ferrari_2);
 }
 
-.McLaren b{
+.McLaren b {
 	background-color: var(--McLaren);
 }
 
@@ -76,7 +76,7 @@
 	background-color: var(--McLaren_2);
 }
 
-.Alpine b{
+.Alpine b {
 	background-color: var(--Alpine);
 }
 
@@ -84,7 +84,7 @@
 	background-color: var(--Alpine_2);
 }
 
-.AlphaTauri b{
+.AlphaTauri b {
 	background-color: var(--AlphaTauri);
 }
 
@@ -92,7 +92,7 @@
 	background-color: var(--AlphaTauri_2);
 }
 
-.Aston b{
+.Aston b {
 	background-color: var(--AstonMartin);
 }
 
@@ -100,7 +100,7 @@
 	background-color: var(--AstonMartin_2);
 }
 
-.Williams b{
+.Williams b {
 	background-color: var(--Williams);
 }
 
@@ -108,7 +108,7 @@
 	background-color: var(--Williams_2);
 }
 
-.Alfa b{
+.Alfa b {
 	background-color: var(--AlfaRomeo);
 }
 
@@ -116,7 +116,7 @@
 	background-color: var(--AlfaRomeo_2);
 }
 
-.Haas b{
+.Haas b {
 	background-color: var(--Haas);
 }
 

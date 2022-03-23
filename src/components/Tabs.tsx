@@ -50,15 +50,9 @@ class TabButton extends React.Component<{ tabName: string; first: Boolean }> {
 
 	handleClick() {
 		document.querySelector(".active.tab").classList.remove("active");
-		document
-			.querySelector(".active.tab-content")
-			.classList.remove("active");
-		document
-			.querySelector(`#${this.props.tabName}Button`)
-			.classList.add("active");
-		document
-			.querySelector("#" + this.props.tabName)
-			.classList.add("active");
+		document.querySelector(".active.tab-content").classList.remove("active");
+		document.querySelector(`#${this.props.tabName}Button`).classList.add("active");
+		document.querySelector("#" + this.props.tabName).classList.add("active");
 	}
 }
 
@@ -66,9 +60,7 @@ class TabContent extends React.Component<{ tabName: string; first: Boolean }> {
 	render() {
 		return (
 			<div
-				className={
-					this.props.first ? "tab-content active" : "tab-content"
-				}
+				className={this.props.first ? "tab-content active" : "tab-content"}
 				id={this.props.tabName}
 			>
 				{this.props.children}

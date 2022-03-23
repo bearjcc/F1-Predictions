@@ -1,14 +1,11 @@
-import {Driver} from "./Drivers";
+import { Driver } from "./Drivers";
 
-export let teams:Team[] = [];
+export let teams: Team[] = [];
 export class Team {
-	drivers:Driver[] = [];
-	points:number = 0;
+	drivers: Driver[] = [];
+	points: number = 0;
 
-	constructor(
-		public name:string,
-		public country:string) 
-	{
+	constructor(public name: string, public country: string) {
 		teams.push(this);
 	}
 }

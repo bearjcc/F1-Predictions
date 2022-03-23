@@ -2,7 +2,7 @@ import React from "react";
 import "./ListRaces.css";
 import { Race, races } from "../classes/Races";
 
-export class ListRaces extends React.Component<{races: Race[]}> {
+export class ListRaces extends React.Component<{ races: Race[] }> {
 	render() {
 		return (
 			<div className="list-group races">

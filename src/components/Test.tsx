@@ -1,16 +1,16 @@
 import React from "react";
 
 class Test extends React.Component<{
-    cake:string
+	cake: string;
 }> {
-
-    render() {
-        return (
-            <h2>
-            <i>{this.props.cake}</i>
-            </h2>
-        );
-    }
+	render() {
+		const cake = this.props.cake;
+		return (
+			<h2>
+				<i>{cake}</i>
+			</h2>
+		);
+	}
 }
 
 export default Test;

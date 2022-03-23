@@ -13,10 +13,7 @@ export class ListDrivers extends React.Component<{
 		type: "sorted" | "championship" | "sort" | "drag";
 	}) {
 		super(props);
-		if (
-			this.props.type === "sorted" ||
-			this.props.type === "championship"
-		) {
+		if (this.props.type === "sorted" || this.props.type === "championship") {
 			this.props.drivers.sort(function (a, b) {
 				return b.points - a.points;
 			});
@@ -42,9 +39,7 @@ export class ListDrivers extends React.Component<{
 								alt={driver.number.toString()}
 							/>
 							<div className="driver-name">{driver.name}</div>
-							<div className="driver-givenName">
-								{driver.givenName}
-							</div>
+							<div className="driver-givenName">{driver.givenName}</div>
 							<img
 								className="driver-profile"
 								src={require(`../img/profile/${driver.name}.png`)}
@@ -55,9 +50,7 @@ export class ListDrivers extends React.Component<{
 								src={require(`../img/teams/${driver.team.name}.png`)}
 								alt={`${driver.team.name}`}
 							/>
-							<div className="driver-points">
-								{driver.points}
-							</div>
+							<div className="driver-points">{driver.points}</div>
 						</div>
 					);
 				})}
