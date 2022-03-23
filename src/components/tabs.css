@@ -1,3 +1,7 @@
+.tab-container {
+	width: 100vw;
+}
+
 /* Style the tab */
 .tabs {
     overflow: hidden;
@@ -30,8 +34,10 @@
 /* Style the tab content */
 .tab-content {
     display: none;
-    padding: 6px 12px;
+	width: 100%;
+    padding: 2px;
     border: 1px solid #ccc;
+	border-radius: 5px;
     border-top: none;
 }
 

@@ -1,17 +1,29 @@
-import React from 'react';
-import './App.css';
-import { Tabs } from './components/Tabs';
+import React from "react";
+import "./App.css";
+import { drivers } from "./classes/Drivers";
+import { ListDrivers } from "./components/ListDrivers";
+import { Tabs } from "./components/Tabs";
+import * as Data2022 from "./data/2022";
 
 function App() {
-  return (
-    <div className="App">
-      <Tabs>
-        <div id="tab1">test 1</div>
-        <div id="tab2">test 2</div>
-        <div id="tab3">test 3</div>
-      </Tabs>
-    </div>
-  );
+	require("./data/2022.tsx");
+
+	return (
+		<div className="App">
+			<Tabs>
+				<div id="Drivers">
+					<ListDrivers
+						id="driverList"
+						drivers={drivers}
+						type="sorted"
+					></ListDrivers>
+				</div>
+				<div id="Teams">Teams</div>
+				<div id="Races">Races</div>
+				<div id="Players">Players</div>
+			</Tabs>
+		</div>
+	);
 }
 
 export default App;
