@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.css";
 import { drivers } from "./classes/Drivers";
+import { races } from "./classes/Races";
+import { DragIcon, DriverNumber, List, Position } from "./components/List";
 import { ListDrivers } from "./components/ListDrivers";
+import { ListRaces } from "./components/ListRaces";
 import { Tabs } from "./components/Tabs";
 import * as Data2022 from "./data/2022";
 
@@ -11,6 +14,17 @@ function App() {
 	return (
 		<div className="App">
 			<Tabs>
+				<div id="Test">
+					<List >
+						{drivers.map((driver, i) => (
+							<>
+								<Position position={i+1}/>
+								<DragIcon />
+								<DriverNumber obj={driver} />
+							</>
+						))}
+					</List>
+				</div>
 				<div id="Drivers">
 					<ListDrivers
 						id="driverList"
@@ -18,8 +32,10 @@ function App() {
 						type="sorted"
 					></ListDrivers>
 				</div>
+				<div id="Races">
+					<ListRaces races={races}/>
+				</div>
 				<div id="Teams">Teams</div>
-				<div id="Races">Races</div>
 				<div id="Players">Players</div>
 			</Tabs>
 		</div>
