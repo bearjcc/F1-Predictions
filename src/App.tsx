@@ -1,23 +1,29 @@
-import {
-	AppBar,
-	Button,
-	Drawer,
-	IconButton,
-	ThemeProvider,
-	Toolbar,
-	Typography,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { f1Theme } from "./themes/f1Theme";
+import React from "react";
 import Navbar from "./components/Navbar";
-import DrawerDemo from "./demos/DrawerDemo";
+import { User } from "./Interfaces";
+import { Home } from "./pages/Home";
+import type { PageName } from "./pages/Page";
+import Page from "./pages/Page";
 
-function App() {
+export const App = () => {
 	require("./data/2022.tsx");
+
+	const [state, setState] = React.useState({
+		loading: true,
+		error: null,
+		currentPage: "Home" as PageName,
+		loggedIn: false,
+		user: {} as User,
+	});
+
+	const changePage = (page: PageName) => {
+		setState({ ...state, currentPage: page });
+	};
 
 	return (
 		<div className="App">
-			<Navbar defaultPage="Home" />
+			<Navbar changePage={changePage} currentPage={state.currentPage} />
+			<Page currentPage={state.currentPage} />
 			{/* <DrawerDemo /> */}
 			{/* <Tabs>
 				<div id="Test">
@@ -46,6 +52,6 @@ function App() {
 			</Tabs> */}
 		</div>
 	);
-}
+};
 
 export default App;

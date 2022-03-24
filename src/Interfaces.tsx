@@ -22,3 +22,11 @@ export interface Race {
 	startDate: Date;
 	endDate: Date;
 }
+
+export interface Player {}
+
+export interface User {
+	username: string;
+	icon: string;
+	data: Object;
+}

@@ -1,15 +1,9 @@
 import * as React from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import { NavList } from "./NavList";
-import {
-	AppBar,
-	Container,
-	IconButton,
-	Toolbar,
-	Typography,
-} from "@mui/material";
+import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { PageName } from "../pages/Page";
 
 // interface Props {
 // 	defaultPage: string;
@@ -18,13 +12,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 type E = React.KeyboardEvent | React.MouseEvent;
 
 interface NavbarProps {
-	defaultPage: string;
+	changePage: (page: PageName) => void;
+	currentPage: PageName;
 }
 
 export default function Navbar(props: NavbarProps) {
 	const [state, setState] = React.useState({
 		drawerOpen: false,
-		currentPage: props.defaultPage,
 	});
 
 	const toggleDrawer = (drawerOpen: boolean) => (event: E) => {
@@ -74,32 +68,21 @@ export default function Navbar(props: NavbarProps) {
 							display: { xs: "none", sm: "block" },
 						}}
 					>
-						{state.currentPage}
+						{props.currentPage}
 					</Typography>
 				</Toolbar>
 			</AppBar>
-			<NavDrawer
-				closeDrawer={closeDrawer}
-				openDrawer={openDrawer}
-				isOpen={state.drawerOpen}
-			/>
+			<SwipeableDrawer
+				anchor="left"
+				open={state.drawerOpen}
+				onClose={closeDrawer}
+				onOpen={openDrawer}
+			>
+				<NavList
+					changePage={props.changePage}
+					currentPage={props.currentPage}
+				/>
+			</SwipeableDrawer>
 		</div>
-	);
-}
-
-function NavDrawer(props: {
-	closeDrawer: (e: E) => void;
-	openDrawer: (e: E) => void;
-	isOpen: boolean;
-}) {
-	return (
-		<SwipeableDrawer
-			anchor="left"
-			open={props.isOpen}
-			onClose={props.closeDrawer}
-			onOpen={props.openDrawer}
-		>
-			<NavList />
-		</SwipeableDrawer>
 	);
 }
