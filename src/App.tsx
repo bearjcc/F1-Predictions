@@ -9,7 +9,8 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { f1Theme } from "./themes/f1Theme";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import DrawerDemo from "./demos/DrawerDemo";
 
 function App() {
 	require("./data/2022.tsx");
@@ -17,6 +18,7 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar defaultPage="Home" />
+			{/* <DrawerDemo /> */}
 			{/* <Tabs>
 				<div id="Test">
 					<List >
