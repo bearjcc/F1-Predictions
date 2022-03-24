@@ -58,32 +58,3 @@ export class Sprint extends Race {
 		}
 	}
 }
-
-// export class showRaces extends React.Component {
-// 	private raceJSX: JSX.Element = null;
-
-// 	render() {
-// 		return (
-// 			<div className="list-group races">
-// 				{races.map(this.raceMakeJSX)}
-// 			</div>
-// 		);
-// 	}
-
-// 	private raceMakeJSX(race:Race, i:number): JSX.Element {
-// 		return (
-// 			<div className="list-group-item race">
-// 				<span className="race-country-flag-span">
-// 					<img className="race-country-flag" src={"img/flags/" + race.country + ".svg"}/>
-// 				</span>
-// 				<span className="race-round">{i + 1}</span>
-// 				<span className="race-shortName">{race.shortName}</span>
-// 				<span className="race-dates">{race.dates}</span>
-// 				<img className="race-circuit-small" src={"img/circuits/small/" + race.shortName + ".png"}/>
-// 				<img className="race-circuit-full" src={"img/circuits/full/" + race.shortName + ".png"}/>
-// 	 		</div>
-// 		)
-
-// 	}
-
-// }
