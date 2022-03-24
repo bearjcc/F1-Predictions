@@ -3,6 +3,7 @@ export interface Team {
 	country: string;
 	points: number;
 	drivers: object[];
+	color: string;
 }
 
 export interface Driver {

@@ -12,7 +12,8 @@ export class Driver {
 		public givenName: string,
 		public team: Team,
 		public number: number,
-		public country: string
+		public country: string,
+		public tla: string
 	) {
 		drivers.push(this);
 		this.setTeam(team);

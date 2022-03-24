@@ -5,7 +5,7 @@ export class Team {
 	drivers: Driver[] = [];
 	points: number = 0;
 
-	constructor(public name: string, public country: string) {
+	constructor(public name: string, public country: string, public color: string) {
 		teams.push(this);
 	}
 }
